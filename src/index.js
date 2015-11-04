@@ -19,6 +19,13 @@ function setBit (v, idx) {
   v[pos] |= (1 << r)
 }
 
+function clearBit (v, idx) {
+  const r = idx % 32
+  const pos = (idx - r) / 32
+
+  v[pos] &= ~(1 << r)
+}
+
 function getBit (v, idx) {
   const r = idx % 32
   const pos = (idx - r) / 32
@@ -33,5 +40,6 @@ function getBit (v, idx) {
 export default {
   createBv,
   setBit,
+  clearBit,
   getBit
 }

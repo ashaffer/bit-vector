@@ -15,13 +15,14 @@ This package exports three functions:
 
   * `createBv(sizeInBits)` - Creates a bit vector with the number of bits you want.  Returns an array or typed array (depending on your environment) of length: `Math.ceil(sizeInBits / 32)`.
   * `setBit(bv, idx)` - Set the bit at `idx` position in the vector
+  * `clearBit(bv, idx)` - Clear the bit at `idx` position in the vector
   * `getBit(bv, idx)` - Retrieve the bit as a boolean value at `idx` position in the vector
 
 That's it for now.
 
 ## Performance
 
-On v8 this is about twice as fast as the equivalent operation using an object.  Here's the [jsperf](http://jsperf.com/bit-vector-vs-object/2).  It is obviously also substantially more memory-efficient.
+On v8 this is about twice as fast as the equivalent operation using an object.  Here's the [jsperf](http://jsperf.com/bit-vector-vs-object/2).  It is obviously also substantially more memory-efficient.  On v8 in particular it should be substantially faster when you need to frequently delete keys, since this puts v8 objects into 'dictionary mode' which is substantially slower.
 
 ## License
 
