@@ -24,6 +24,10 @@ That's it for now.
 
 On v8 this is about twice as fast as the equivalent operation using an object.  Here's the [jsperf](http://jsperf.com/bit-vector-vs-object/2).  It is obviously also substantially more memory-efficient.  On v8 in particular it should be substantially faster when you need to frequently delete keys, since this puts v8 objects into 'dictionary mode' which is substantially slower.
 
+  * Chrome - ~2x faster than objects
+  * Safari - 2-3x faster
+  * Firefox - 40x faster
+
 ## License
 
 The MIT License
