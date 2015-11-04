@@ -2,7 +2,7 @@
   "name": "bit-vector",
   "description": "Simple, fast bit vectors for javascript.  Useful in place of objects where performance is extremely important and your keys are all iteger convertible values)",
   "repository": "git://github.com/ashaffer/bit-vector.git",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
