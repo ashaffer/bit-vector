@@ -11,7 +11,7 @@ Simple, fast bit vectors for javascript.  Useful in place of object maps where p
 
 ## Usage
 
-This package exports three functions:
+This package exports four functions:
 
   * `createBv(sizeInBits)` - Creates a bit vector with the number of bits you want.  Returns an array or typed array (depending on your environment) of length: `Math.ceil(sizeInBits / 32)`.
   * `setBit(bv, idx)` - Set the bit at `idx` position in the vector
