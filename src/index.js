@@ -37,7 +37,7 @@ function getBit (v, idx) {
  * Exports
  */
 
-export default {
+export {
   createBv,
   setBit,
   clearBit,
